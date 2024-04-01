@@ -15,4 +15,21 @@ import csv
 import pandas
 
 data = pandas.read_csv("weather_data.csv")
-print(data['temp'])
+data_dict = data.to_dict()
+print(data_dict)
+temp_list = data["temp"].to_list()
+# sum_temp = 0.0
+# counter = 1
+print(temp_list)
+# for temp in temp_list:
+#     sum_temp+=temp
+#     counter+=1
+# ave_temp = sum_temp / counter
+# print(f"Average temperature: {ave_temp}")
+
+# ave_temp = sum(temp_list) / len(temp_list)
+# print(ave_temp)
+print(data["temp"].mean())
+print(data["temp"].max())
+
+

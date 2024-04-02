@@ -48,6 +48,9 @@ print(monday_temp_F)
 # Data frame from scratch
 data_dict = {
     "students": ["Ruffa", "Ela", "Ruffino"],
-    "scores": [75, 80,9 5]
+    "scores": [75, 80, 95]
 }
+data = pandas.DataFrame(data_dict)
+data.to_csv("new_data.csv")
+
 

@@ -66,8 +66,13 @@ for color in color_list:
     elif color in color_dict.keys():
         count = color_dict[color] + 1
         color_dict[color] = count
-color_dict
-print(color_dict)
+data_dict = {
+    "Fur Color": ["Gray", "Cinnamon", "Black"],
+    "Count": [color_dict["Gray"], color_dict["Cinnamon"], color_dict["Black"]]
+}
+df = pandas.DataFrame(data_dict)
+df.to_csv("squirrels_count.csv")
+
 
 
 

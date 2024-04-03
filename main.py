@@ -57,6 +57,17 @@
 import pandas
 
 data = pandas.read_csv("squirrel_data2018.csv")
-data["Primary Fur Color"]
+color_list = data["Primary Fur Color"]
+color_dict = {}
+count = 0
+for color in color_list:
+    if color not in color_dict.keys():
+        color_dict[color] = count + 1
+    elif color in color_dict.keys():
+        count = color_dict[color] + 1
+        color_dict[color] = count
+color_dict
+print(color_dict)
+
 
 
